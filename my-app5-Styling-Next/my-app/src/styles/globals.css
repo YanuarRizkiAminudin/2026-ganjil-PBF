@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+<<<<<<< HEAD
+main {
+  height: 100%;
+}
+.big {
+  font-size: 1.5rem;
+}
+=======
+const Navbar = () => {
+  return (
+    <div style={{
+      width: "100%",
+      padding: "30px 20px",
+      backgroundColor: "#1a1a2e",
+      color: "white",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "2rem",
+      fontWeight: "bold"
+    }}>
+      <div>Navbar Component</div>
+    </div>
+  );
+};
+
+export default Navbar;
+>>>>>>> e8a726567a2e12f20d2f2837ac501da8a9fd590e

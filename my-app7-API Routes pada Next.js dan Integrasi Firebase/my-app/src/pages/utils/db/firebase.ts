@@ -1,14 +1,16 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  apiKey: "AIzaSyAQT4Myv772vxRRaUfZXWhgYW_ETVR2d8c",
+  authDomain: "framework-next-20ef7.firebaseapp.com",
+  projectId: "framework-next-20ef7",
+  storageBucket: "framework-next-20ef7.firebasestorage.app",
+  messagingSenderId: "829137568511",
+  appId: "1:829137568511:web:9f69126c18ac0b7323c2ca"
 };
 
-const app = initializeApp(firebaseConfig);
+const app = !getApps().length
+  ? initializeApp(firebaseConfig)
+  : getApps()[0];
 
 export default app;

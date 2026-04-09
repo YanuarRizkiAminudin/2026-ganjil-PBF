@@ -1,32 +1,19 @@
-import { useEffect, useState } from "react";
-import TampilanProduk from "../../views/product";
+import useSWR from "swr";
+import TampilanProduk from "../../../views/product";
+import { ProductType } from "../../types/Product.type";
 
-const kategori = () => {
-  const [products, setProducts] = useState([]);
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-  // useEffect(() => {
-  //   if (!isLogin) {
-  //     push("/auth/login");
-  //   }
-  // }, []);
+export default function ProdukPageCSR() {
+  const { data, error } = useSWR<ProductType[]>("/api/produk", fetcher);
 
-  useEffect(() => {
-    fetch("/api/produk")
-      .then((response) => response.json())
-      .then((responsedata) => {
-        setProducts(responsedata.data);
-        // console.log("Data produk:", responsedata.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching produk:", error);
-      });
-  }, []);
+  if (error) return <div>Error loading</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <div>
-      <TampilanProduk products={products} />
+      <h1>Halaman Produk CSR</h1>
+      <TampilanProduk products={data} />
     </div>
   );
-};
-
-export default kategori;
+}

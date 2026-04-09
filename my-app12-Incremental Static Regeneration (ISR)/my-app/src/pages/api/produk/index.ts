@@ -42,6 +42,30 @@ const products: Product[] = [
   size: '43',
   image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400',
 },
+{
+  id: '5',
+  name: 'Sepeda Gunung',
+  price: '1500000',
+  category: "Sports",
+  size: 'Free',
+  image: 'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=400',
+},
+{
+  id: '6',
+  name: 'Sepatu Running Pro',
+  price: '1250000',
+  category: "Men's Shoes",
+  size: '44',
+  image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400',
+},
+{
+  id: '7',
+  name: 'Tas Ransel',
+  price: '350000',
+  category: "Accessories",
+  size: 'One Size',
+  image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400',
+}
 ];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Product[]>) {

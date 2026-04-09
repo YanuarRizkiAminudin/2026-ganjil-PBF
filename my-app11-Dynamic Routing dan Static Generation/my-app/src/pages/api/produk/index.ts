@@ -34,6 +34,14 @@ const products: Product[] = [
     size: '40',
     image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400',
   },
+  {
+  id: '4',
+  name: 'Sepatu Baru Test',
+  price: '750000',
+  category: "Men's Shoes",
+  size: '43',
+  image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400',
+},
 ];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Product[]>) {

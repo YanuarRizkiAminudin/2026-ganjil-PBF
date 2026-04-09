@@ -1,0 +1,42 @@
+.error {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1a1a2e;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  gap: 16px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #ecf0f1;
+  }
+
+  &__image {
+    width: 300px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+}

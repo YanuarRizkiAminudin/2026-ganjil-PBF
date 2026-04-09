@@ -1,19 +1,19 @@
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
 import DetailProduk from '../../views/DetailProduct';
-import { ProductType } from '../../types/Product.type';
 
-export default function DetailPageSSG({ product }: { product: ProductType }) {
-  return <DetailProduk product={product} />;
-}
+const fetcher = (url: string) => fetch(url).then(res => res.json());
 
-export async function getStaticPaths() {
-  const res = await fetch('http://localhost:3000/api/produk');
-  const products: ProductType[] = await res.json();
-  const paths = products.map((product) => ({ params: { produk: product.id } }));
-  return { paths, fallback: false };
-}
+export default function DetailPage() {
+  const router = useRouter();
+  const { produk } = router.query;
+  const { data, isLoading } = useSWR(
+    produk ? `/api/produk/${produk}` : null,
+    fetcher
+  );
 
-export async function getStaticProps({ params }: { params: { produk: string } }) {
-  const res = await fetch(`http://localhost:3000/api/produk/${params.produk}`);
-  const product = await res.json();
-  return { props: { product } };
+  if (isLoading) return <div>Loading detail...</div>;
+  if (!data) return <div>Produk tidak ditemukan</div>;
+
+  return <DetailProduk product={data} />;
 }

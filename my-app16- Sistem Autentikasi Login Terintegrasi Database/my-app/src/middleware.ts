@@ -1,19 +1,13 @@
-// src/middleware.ts
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
+import withAuth from "./middleware/withAuth";
 
-export function middleware(request: NextRequest) {
-  const isLogin = false; // ubah ke true untuk test akses
-
-  if (isLogin) {
-    return NextResponse.next();
-  } else {
-    // Redirect ke halaman login
-    return NextResponse.redirect(new URL('/auth/login', request.url));
-  }
+function middleware(request: NextRequest) {
+  return NextResponse.next();
 }
 
-// Hanya terapkan untuk route /produk dan /about
+export default withAuth(middleware, ["/produk", "/about", "/admin", "/profile"]);
+
 export const config = {
-  matcher: ['/produk', '/about'],
+  matcher: ["/produk", "/about", "/admin", "/profile"],
 };

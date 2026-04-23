@@ -1,6 +1,6 @@
 // src/pages/produk/static.tsx
 import { ProductType } from '../../types/Product.type';
-import TampilanProduk from '../../views/product';
+import TampilanProduk from '@/views/product';
 
 // Data statis sebagai fallback (sama dengan API)
 const staticProducts: ProductType[] = [

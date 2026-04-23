@@ -8,6 +8,8 @@ export default function Home() {
         <Link href="/produk">Ke Produk (CSR)</Link>
         <Link href="/produk/server">Ke Produk (SSR)</Link>
         <Link href="/produk/static">Ke Produk (SSG)</Link>
+        <Link href="/admin">Ke Halaman Admin</Link>
+        <Link href="/profile">Ke Halaman Profile</Link>
       </nav>
     </div>
   );

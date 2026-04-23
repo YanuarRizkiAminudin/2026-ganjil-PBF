@@ -1,4 +1,4 @@
-import styles from '@/pages/produk/Produk.module.css';
+import styles from '../../../src/pages/produk/Produk.module.css';
 
 type ProductType = {
   id: string;

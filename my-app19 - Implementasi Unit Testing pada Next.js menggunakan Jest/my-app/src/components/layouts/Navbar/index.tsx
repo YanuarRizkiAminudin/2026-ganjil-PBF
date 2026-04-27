@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className={styles.navbar__right}>
         {data ? (
           <>
-            <div className={styles.navbar__user}>
+            <div className={styles.navbar__user} data-testid="welcome">
               Welcome, {data.user?.fullname}
               {data?.user?.image && (
                 // <img src={data.user.image} />

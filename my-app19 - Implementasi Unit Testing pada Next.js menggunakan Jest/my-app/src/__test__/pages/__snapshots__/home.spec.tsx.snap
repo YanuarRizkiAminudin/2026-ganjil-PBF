@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Home Page renders snapshot 1`] = `
+<div>
+  <div
+    style="padding: 2rem; text-align: center;"
+  >
+    <h1>
+      HOME
+    </h1>
+    <p
+      style="margin-top: 1rem;"
+    >
+      <a
+        href="/auth/login"
+      >
+        Login
+      </a>
+    </p>
+    <nav
+      style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;"
+    >
+      <a
+        href="/produk"
+      >
+        Ke Produk (CSR)
+      </a>
+      <a
+        href="/produk/server"
+      >
+        Ke Produk (SSR)
+      </a>
+      <a
+        href="/produk/static"
+      >
+        Ke Produk (SSG)
+      </a>
+      <a
+        href="/admin"
+      >
+        Ke Halaman Admin
+      </a>
+      <a
+        href="/editor"
+      >
+        Ke Halaman Editor
+      </a>
+      <a
+        href="/profile"
+      >
+        Ke Halaman Profile
+      </a>
+    </nav>
+  </div>
+</div>
+`;

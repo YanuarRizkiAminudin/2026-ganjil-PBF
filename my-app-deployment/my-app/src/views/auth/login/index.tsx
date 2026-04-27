@@ -8,7 +8,7 @@ const TampilanLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { push, query } = useRouter();
 
-  const callbackUrl: any = query.callbackUrl || "/";
+  const callbackUrl: string = (query.callbackUrl as string) || "/";
   const [error, setError] = useState("");
 
   const handleSubmit = async (event: any) => {

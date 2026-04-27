@@ -6,9 +6,9 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function DetailPage() {
   const router = useRouter();
-  const { produk } = router.query;
+  const { id } = router.query;
   const { data, isLoading } = useSWR(
-    produk ? `/api/produk/${produk}` : null,
+    id ? `/api/produk/${id}` : null,
     fetcher
   );
 

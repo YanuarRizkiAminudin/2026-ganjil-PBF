@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`About Page renders without crashing (snapshot) 1`] = `
+<div>
+  <div
+    style="padding: 2rem; text-align: center;"
+  >
+    <h1
+      data-testid="title"
+    >
+      Tentang Kami
+    </h1>
+    <p>
+      Ini adalah halaman about yang diproteksi middleware.
+    </p>
+  </div>
+</div>
+`;

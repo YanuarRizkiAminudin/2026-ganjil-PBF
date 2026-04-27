@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`404 Page renders snapshot 1`] = `
+<div>
+  <div
+    class="error"
+  >
+    <img
+      alt="404"
+      src="/page-not-found.png"
+    />
+    <h1>
+      404 - Halaman Tidak Ditemukan
+    </h1>
+    <p>
+      Maaf, halaman yang Anda cari tidak ada.
+    </p>
+  </div>
+</div>
+`;
